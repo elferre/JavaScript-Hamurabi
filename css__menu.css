@@ -1,0 +1,91 @@
+.down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent
+}
+
+.botonesDown__Venta {
+    position: relative;
+    left: 10px;
+    top: 0px;
+}
+
+.BtnAbajo___Venta--1,
+.BtnAbajo___Venta--2,
+.botonesDown__Venta {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(45deg, #1e0259 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #120572 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.botonesDown__Venta:hover,
+.BtnAbajo___Venta--1:hover,
+.BtnAbajo___Venta--2:hover,
+.BtnAbajo___Compra--1:hover,
+.BtnAbajo___Compra--2:hover,
+.botonesDown__Comprar:hover,
+.botonesDown__Explica:hover {
+    background-position: 0;
+}
+
+.botonesDown__Comprar {
+    position: relative;
+    left: 10px;
+    top: 0px;
+}
+
+.BtnAbajo___Compra--1,
+.BtnAbajo___Compra--2,
+.botonesDown__Comprar {
+    color: #fff;
+    background-color: #33b7b0;
+    border-color: #238184;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(45deg, #073638 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #043c50 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.botonesDown__Explica {
+    color: #fff;
+    background-color: #33b742;
+    border-color: #13572c;
+    position: relative;
+    left: 10px;
+    top: 0px;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(45deg, #07381a 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #045038 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.BtnAbajo {
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    text-align: left;
+    width: 200px;
+    height: 150px;
+}

@@ -1,0 +1,441 @@
+/**========================================================================
+ * *                                INFO
+ *   USADO EN EL PRIMER GRID
+ *   
+ *   
+ *
+ *========================================================================**/
+
+.pos_class {
+    position: absolute;
+    left: 620px;
+    top: 30px;
+    z-index: 1001;
+    background: #040599;
+    border: 2px solid #393939;
+    padding: 2px;
+    width: 400px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 30% 20% auto 20px;
+    grid-template-rows: 25px 35px 35px 35px 35px 35px 35px 35px 15px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.encabeza {
+    grid-column: 1/ 4;
+    line-height: 25px;
+    text-align: center;
+}
+
+.OpcX {
+    cursor: pointer;
+    border: 4;
+    line-height: 25px;
+    grid-column: 4 / 4;
+    background: #010149;
+    text-align: center;
+    background-image: -webkit-linear-gradient(45deg, #580457 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #3d0a3b 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+#Btn1 {
+    grid-column: 1/span 2;
+    line-height: 35px;
+}
+
+#Btn2 {
+    grid-column: 3/span 2;
+    line-height: 35px;
+}
+
+#Btn3 {
+    grid-column: 1/span 2;
+    line-height: 35px;
+}
+
+#Btn4 {
+    grid-column: 3/span 2;
+    line-height: 35px;
+}
+
+#Btn5 {
+    grid-column: 1/span 2;
+    line-height: 35px;
+}
+
+#Btn6 {
+    grid-column: 3/span 2;
+    line-height: 35px;
+}
+
+#Btn7 {
+    grid-column: 1/span 2;
+    line-height: 35px;
+}
+
+#Btn8 {
+    grid-column: 3/span 2;
+    line-height: 35px;
+}
+
+#Btn9 {
+    grid-column: 1/span 2;
+    line-height: 35px;
+}
+
+#Btn10 {
+    grid-column: 3/span 2;
+    line-height: 35px;
+}
+
+#Btn11 {
+    grid-column: 1/span 2;
+    line-height: 35px;
+}
+
+#Btn12 {
+    grid-column: 3/span 2;
+    line-height: 35px;
+}
+
+#Btn13 {
+    grid-column: 1/span 2;
+}
+
+#Btn14 {
+    grid-column: 3/span 2;
+}
+
+.Final__BotonesFinal-Bt {
+    background: #71a154;
+    grid-column: 3/span 2;
+}
+
+.__ferresoft {
+    grid-column: 1/5;
+    line-height: 15px;
+    font-size: 10px;
+}
+
+.Final__BotonesFinal-Btn--Agregar,
+.Final__BotonesFinal-Btn {
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.Final__BotonesFinal-Btn {
+    background: #71a154;
+    border-color: #405b2f;
+    background-image: -webkit-linear-gradient(45deg, #07850d 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #083c0f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.Final__BotonesFinal-Btn--Agregar {
+    background: #5454a1;
+    border-color: #2f305b;
+    background-image: -webkit-linear-gradient(45deg, #580457 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #3d0a3b 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 500ms ease-in-out;
+    transition: background 500ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.Final__BotonesFinal-Btn--Agregar:hover,
+.Final__BotonesFinal-Btn:hover,
+.OpcX:hover {
+    background-position: 0;
+}
+
+.sBotonesFinal {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    width: 800px;
+    line-height: 30px;
+}
+
+
+/**========================================================================
+ * *                                INFO
+ *   USADO EN EL SEGUNDO GRID
+ *   
+ *   
+ *
+ *========================================================================**/
+
+#Carteles {
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    width: 400px;
+    height: 300px;
+    text-align: justify;
+    color: var(--color-verde);
+}
+
+.PedValor {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto 85px 85px 5px;
+    grid-template-rows: auto auto auto auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.__PedValor {
+    border: 4;
+    padding: 2px;
+}
+
+.ValorRec1 {
+    grid-column: 1/ 5;
+    padding: 0;
+}
+
+.ValorRec2 {
+    grid-column: 1/ 2;
+}
+
+.ValorRec3 {
+    grid-column: 2/ 5;
+    z-index: 2;
+}
+
+.ValorRec4 {
+    grid-column: 1/ 2;
+}
+
+.ValorRec5 {
+    grid-column: 2/ 5;
+    z-index: 2;
+}
+
+.ValorRec6 {
+    grid-column: 2/ 3;
+}
+
+.ValorRec7 {
+    grid-column: 3/ 4;
+}
+
+
+/*
+.general__Carteles--Cancela {
+    left: 60px;
+    top: 260px;
+}
+
+.general__Carteles--Enviar {
+    left: 160px;
+    top: 260px;
+}
+*/
+
+.general__Carteles--Cancela,
+.general__Carteles--Enviar {
+    margin-left: 5px;
+    padding: 12px;
+    color: #86999d;
+    background: #5a5858;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(45deg, #2b2e2b 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #1d1e1d 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.general__Carteles--Enviar:hover,
+.general__Carteles--Cancela:hover {
+    background-position: 0;
+}
+
+.general__Datos {
+    position: absolute;
+    left: 45px;
+    top: 250px;
+    text-align: left;
+    width: 100px;
+    height: 100px;
+    z-index: 3;
+}
+
+
+/**========================================================================
+ * *                                INFO
+ *   USADO EN EL TERCER GRID
+ *   
+ *   EL MISMO ES PARA LA EXPLICACION DEL MISMO
+ *
+ *========================================================================**/
+
+.Grid3 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 330px;
+    height: 280px;
+    padding: 5px;
+    z-index: 3;
+    background-color: rgb(101, 12, 12);
+}
+
+.textExplicacion {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 5px repeat(10, 32px) 5px;
+    grid-template-rows: 25px 1fr 15px;
+    margin: 0 auto;
+    background-color: #000;
+    padding: 2px;
+}
+
+#__Eexplica1 {
+    grid-column: 1/ span 12;
+    text-align: center;
+}
+
+#__Eexplica2 {
+    grid-column: 2/ 12;
+    text-align: left;
+}
+
+#__Eexplica3 {
+    grid-column: 2/ 3;
+    text-align: center;
+}
+
+#__Eexplica4 {
+    grid-column: 3/ 4;
+    text-align: center;
+}
+
+#__Eexplica5 {
+    grid-column: 4/ 5;
+    text-align: center;
+}
+
+#__Eexplica6 {
+    grid-column: 5/ 6;
+    text-align: center;
+}
+
+#__Eexplica7 {
+    grid-column: 6/ 7;
+    text-align: center;
+}
+
+#__Eexplica8 {
+    grid-column: 7/ 8;
+    text-align: center;
+}
+
+#__Eexplica9 {
+    grid-column: 8/ 9;
+    text-align: center;
+}
+
+#__Eexplica10 {
+    grid-column: 9/ 10;
+    text-align: center;
+}
+
+#__Eexplica11 {
+    grid-column: 10/ 11;
+    text-align: center;
+}
+
+#__Eexplica12 {
+    grid-column: 11/ 12;
+    text-align: center;
+}
+
+#Eexplica3,
+#Eexplica4,
+#Eexplica5,
+#Eexplica6,
+#Eexplica7,
+#Eexplica8,
+#Eexplica9,
+#Eexplica10,
+#Eexplica11,
+#Eexplica12 {
+    height: 100%;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+    color: #efeaea;
+    background: #281919;
+    border: none;
+    border-radius: 2px;
+    background-image: -webkit-linear-gradient(45deg, #034a03 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #06a806 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+}
+
+#Eexplica3:hover,
+#Eexplica4:hover,
+#Eexplica5:hover,
+#Eexplica6:hover,
+#Eexplica7:hover,
+#Eexplica8:hover,
+#Eexplica9:hover,
+#Eexplica10:hover,
+#Eexplica11:hover,
+#Eexplica12:hover {
+    background-position: 0;
+    color: #141414;
+}
+
+#ica3,
+#ica4,
+#ica5,
+#ica6,
+#ica7,
+#ica8,
+#ica9,
+#ica10,
+#ica11,
+#ica12 {
+    height: 100%;
+    width: 25px;
+    text-align: center;
+    cursor: no-drop;
+}
+
+.VDesdeHastaTable {
+    padding: 1px;
+    border-style: solid;
+}
+
+.VDesdeHasta {
+    text-align: center;
+    padding: 2px;
+}

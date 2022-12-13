@@ -1,0 +1,90 @@
+#graph,
+#graph1,
+#graph2 {
+    top: 55px;
+    left: 10px;
+    position: absolute;
+    width: 800px;
+    height: 400px;
+}
+
+.Final__Tabla {
+    position: relative;
+    top: 400px;
+    left: 0px;
+    color: #fff;
+    width: 800px;
+    height: 400px;
+    margin: 0px 2% 0px 2%;
+}
+
+.__table {
+    width: 99%;
+    font-size: 12px;
+    background: #2a085c;
+    border-color: #090a3b;
+}
+
+.__varTablaFinal {
+    width: 150px;
+}
+
+.__td {
+    width: 100px;
+    text-align: center;
+}
+
+.__NO1 {
+    background-color: #2a085c;
+    /*cursor: no-drop;*/
+}
+
+.__NO1s {
+    background-color: #08085c;
+    cursor: no-drop;
+}
+
+.botonOpenX {
+    position: absolute;
+    top: 470px;
+    left: 350px;
+    cursor: pointer;
+    border: 4;
+    line-height: 25px;
+    background-color: #08085c;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.botonOpenX:hover {
+    background-image: -webkit-linear-gradient(45deg, #580457 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #3d0a3b 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 1000ms ease-in-out;
+    transition: background 1000ms ease-in-out;
+}
+
+.OpcionBtn1 {
+    position: absolute;
+    top: 170px;
+    left: 150px;
+    width: 150px;
+    background-color: #260b86;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 1px;
+    height: 50px;
+    border-radius: 5px;
+    padding-top: 12px;
+}
+
+.OpcionBtn1:hover {
+    background-image: -webkit-linear-gradient(45deg, #350dc7 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #0c064d 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 1000ms ease-in-out;
+    transition: background 1000ms ease-in-out;
+}

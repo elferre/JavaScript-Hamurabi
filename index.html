@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="expires" content="Fri, 18 Jul 2014 1:00:00 GMT">
+    <link rel="stylesheet" type="text/css" href="css__variables.css">
+    <link rel="stylesheet" type="text/css" href="css__menu.css">
+    <link rel="stylesheet" type="text/css" href="css__indexa.css">
+    <link rel="stylesheet" type="text/css" href="css__forms.css">
+    <link rel="stylesheet" type="text/css" href="css__final.css">
+    <link rel="stylesheet" type="text/css" href="css__grid.css">
+    <link rel="icon" type="image/x-icon" href="/imagen/favicon.ico">
+    <!---
+        Usando Libreria Morris
+    <div id="graph"></div>
+    <pre id="code" class="prettyprint linenums">
+        var year_data = [
+      {"period": "2012", "licensed": 3407, "sorned": 660},
+      {"period": "2011", "licensed": 3351, "sorned": 629},
+      {"period": "2010", "licensed": 3269, "sorned": 618},
+      {"period": "2003", "licensed": 3215, "sorned": 622}
+    ];
+    Morris.Line({
+      element: 'graph',
+      data: year_data,
+      xkey: 'period',
+      ykeys: ['licensed', 'sorned'],
+      labels: ['Licensed', 'SORN']
+    });
+    </pre>
+    -->
+    <script src="./years/jquery.min.js"></script>
+    <script src="./years/raphael-min.js"></script>
+    <script src="./years/morris.js"></script>
+    <script src="./years/prettify.min.js"></script>
+    <script src="./years/example.js"></script>
+    <link rel="stylesheet" href="./years/example.css">
+    <link rel="stylesheet" href="./years/prettify.min.css">
+    <link rel="stylesheet" href="./years/morris.css">
+    <!---
+        Fin Libreria Morris
+    -->
+
+    <title>Hamurabi</title>
+</head>
+
+<body>
+    <h1>Hamurabi<span class="Para_Final"></span></h1>
+    <form>
+        <input type="text" class="Inicio" value="false" size="6" hidden>
+    </form>
+    <!--* Esto se muestra si la pantalla en menor a 900 px --->
+    <div class="Menor900">
+        <div class="Responsi0__IMG">
+            <div class="Contenedor_Responsi0">
+                <div class="imagenes1"><img src="./imagen/Cel00.jpg" alt=""> </div>
+                <div class="imagenes2"><img src="./imagen/Cel01.jpg" alt=""></div>
+                <div class="imagenes3">La pantalla es menor a <br><br> <b>900 pixeles</b> de ancho</div>
+                <div class="imagenes4"><b>Ferresoft (r) 2022<br><br> Hamurabi</b><br>V. <span class="VersionA"></span></div>
+            </div>
+        </div>
+    </div>
+    <!--* Esto se muestra si la pantalla en mayor a 900 px --->
+    <div class="Mayor900">
+        <div>
+            <div>
+                <div class="Todo1" id="TodoIMG">
+                    <div class="general" hidden>
+                        <p class="general__Datos" id="general__Datos" hidden="hidden">Aca va el Valor de Alimentos y Tierra Factor</p>
+                        <!---
+                        Parte donde sale cartel de Compra o Venta
+                    -->
+                        <div class="general__Carteles" id="Carteles">
+                            <div class="PedValor" hidden="hidden">
+                                <div class="__PedValor ValorRec1">
+                                    <h3 class="general__Carteles--Op1" hidden="hidden">Compra Alimentos</h3>
+                                    <h3 class="general__Carteles--Op2" hidden="hidden">Compra Tierra</h3>
+                                    <h3 class="general__Carteles--Op3" hidden="hidden">Venta Alimentos</h3>
+                                    <h3 class="general__Carteles--Op4" hidden="hidden">Venta Tierra</h3>
+                                </div>
+                                <div class="__PedValor ValorRec2"></div>
+                                <div class="__PedValor ValorRec3"> <input type="number" class="general__Carteles CVvalor" id="CVvalor" hidden="hidden" title="Valor Compra o Venta (Segun Seleccion)">
+                                </div>
+                                <div class="__PedValor ValorRec4">Alimento p/Poblacion</div>
+                                <div class="__PedValor ValorRec5"><input type="number" class="general__Carteles alimPoblacion" id="alimPoblacion" title="Alimento para la Poblacion" hidden="hidden"></div>
+                                <div class="__PedValor ValorRec6"> <input type="button" value="Cancelar" id="CV__Cancelar" class="general__Carteles--Cancela" hidden="hidden" title="Cancelar y Seleccionar nuevamente"></div>
+                                <div class="__PedValor ValorRec7"> <input type="button" value="Enviar" id="CV_Enviar" class="general__Carteles--Enviar" hidden="hidden" title="Enviar Dato">
+                                </div>
+                                <div class="__PedValor ValorRec8"></div>
+                                <div class="__PedValor ValorRec9"></div>
+                            </div>
+                        </div>
+                        <!--
+                Usado para mostrar un cartel de que se esta procesando
+            -->
+                        <div class="Procesando" hidden="hidden">Se esta Procesando el Pedido<br>Espere por fabor....</div>
+                        <!--
+                        Sale el Menu y Sub menus
+                    -->
+                        <div class="botonesDown" id="botonesDown">
+                            <button type="button" class="botonesDown__Venta" id="Venta">Vender <span class="down"></span></button>
+                            <button type="button" class="botonesDown__Comprar" id="Comprar">Comprar <span class="down"></span></button>
+                            <button type="button" class="botonesDown__Explica" id="Explica">Explicacion </button>
+                            <div class="BtnAbajo">
+                                <div class="Compra" id="dropdownCompra" hidden="hidden"><br>
+                                    <button type="button" class="BtndownCompra BtnAbajo___Compra--1" id="dropdownCompra1">Comprar Alimento</button><br><br>
+                                    <button type="button" class="BtndownCompra BtnAbajo___Compra--2" id="dropdownCompra2">Comprar Tierra</button><br>
+                                </div>
+                                <div class="Venta" id="dropdownVenta" hidden="hidden"><br>
+                                    <button type="button" class="BtndownVenta BtnAbajo___Venta--1" id="dropdownVenta1">Vender Alimento</button><br><br>
+                                    <button type="button" class="BtndownVenta BtnAbajo___Venta--2" id="dropdownVenta2">Vender Tierra</button><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nombresGeneral1" id="nombresGeneral">
+                            Nombre :
+                        </div>
+                    </div>
+                    <div class="Detalle" id="Detalle">
+                        <!--Aqui va toda la tabla de Detalle varDetalle[0].innerHTML -->
+                    </div>
+                    <!--
+                    Aqui es lo primero que pide el Nombre y Años a jugar
+                -->
+                    <div class="muestraNombre" hidden>
+                        <form id="vformulario"><br><br> Nombre :
+                            <input type="text" name="nombre" id="nombre" class="nombre" required><br><br> Años :
+                            <input type="number" name="anos" id="anos" class="anos" value="2" title="Ingrese la cantidad de Años a Jugar"><br><br>Nivel Dificultad:
+                            <div class="box">
+                                <select name="select" class="Nivel" id="Nivel" title="Seleccion el Nivel de Dificultad">
+                            <option value="1" selected>Basico</option>
+                            <option value="2" >Avanzado</option>
+                            <option value="3">Experto</option>
+                            </select>
+                            </div>
+                            <br><br>
+                            <input type="button" id="vboton" value="Enviar" class="vboton" title="Boton para enviar a chequear Datos">
+                        </form>
+                        <div id="Error_vformulario"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="explicacion">
+                <table class="TableTA" hidden="hidden">
+                    <tr>
+                        <td>
+                            <!--* AQUI ES DONDE SE VISUALIZA LA EXPLICACION * --->
+                            <div class="Grid3">
+                                <div class="textExplicacion">
+                                    <div id="__Eexplica1">
+                                        <div class="__textExplicacion Eexplica1" id="Eexplica1">Explicacion</div>
+                                    </div>
+                                    <div id="__Eexplica2">
+                                        <div class="__textExplicacion Eexplica2" id="Eexplica2"></div>
+                                    </div>
+                                    <div id="__Eexplica3">
+                                        <div class="__textExplicacion Eexplica3" id="Eexplica3">&lt;&lt;</div>
+                                        <div class="__textExplicacion Eexplica3" id="ica3" hidden="hidden">&lt;&lt;</div>
+                                    </div>
+                                    <div id="__Eexplica4">
+                                        <div class="__textExplicacion Eexplica4" id="Eexplica4">&lt;</div>
+                                        <div class="__textExplicacion Eexplica4" id="ica4" hidden="hidden">&lt;</div>
+                                    </div>
+                                    <div id="__Eexplica5">
+                                        <div class="__textExplicacion Eexplica5" id="Eexplica5">1</div>
+                                        <div class="__textExplicacion Eexplica5" id="ica5" hidden="hidden">1</div>
+                                    </div>
+                                    <div id="__Eexplica6">
+                                        <div class="__textExplicacion Eexplica6" id="Eexplica6">2</div>
+                                        <div class="__textExplicacion Eexplica6" id="ica6" hidden="hidden">2</div>
+                                    </div>
+                                    <div id="__Eexplica7">
+                                        <div class="__textExplicacion Eexplica7" id="Eexplica7">3</div>
+                                        <div class="__textExplicacion Eexplica7" id="ica7" hidden="hidden">3</div>
+                                    </div>
+                                    <div id="__Eexplica8">
+                                        <div class="__textExplicacion Eexplica8" id="Eexplica8">4</div>
+                                        <div class="__textExplicacion Eexplica8" id="ica8" hidden="hidden">4</div>
+                                    </div>
+                                    <div id="__Eexplica9">
+                                        <div class="__textExplicacion Eexplica9" id="Eexplica9">5</div>
+                                        <div class="__textExplicacion Eexplica9" id="ica9" hidden="hidden">5</div>
+                                    </div>
+                                    <div id="__Eexplica10">
+                                        <div class="__textExplicacion Eexplica10" id="Eexplica10">6</div>
+                                        <div class="__textExplicacion Eexplica10" id="ica10" hidden="hidden">6</div>
+                                    </div>
+                                    <div id="__Eexplica11">
+                                        <div class="__textExplicacion Eexplica11" id="Eexplica11">&gt;</div>
+                                        <div class="__textExplicacion Eexplica11" id="ica11" hidden="hidden">&gt;</div>
+                                    </div>
+                                    <div id="__Eexplica12">
+                                        <div class="__textExplicacion Eexplica12" id="Eexplica12">&gt;&gt;</div>
+                                        <div class="__textExplicacion Eexplica12" id="ica12" hidden="hidden">&gt;&gt;</div>
+                                    </div>
+                                </div>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <div class="piePagina"><span class="Saludo">CopyRight Edgardo (r) 2022 Ver <span class="Version"></span></span>
+            </div>
+            <!--
+        DIV del final
+    -->
+            <div class="AcaEstaFinal">
+                <!-- Aca se muestra la opcion de Continuar hacia la Estadistica --->
+                <div class="BtnPasar">
+                    <div class="__BtnPasar OpcionBtn1" id="OpcionBtn1">Pasar a Estadistica</div>
+                    <div class="__BtnPasar OpcionBtn2" id="OpcionBtn2">Gracias por Todo</div>
+                </div>
+                <div>
+                    <div class="Final" hidden="hidden">
+                        <div>
+                            <div class="pos_class" hidden="hidden">
+                                <div class="grid-layout">
+                                    <div class="__pos_class encabeza">Opciones para Agregar o Quitar</div>
+                                    <div class="__pos_class OpcX" id="botonX" title="Cerrar PopUP">X</div>
+                                    <div class="Final__BotonesFinal-Btn v1" id="Btn1">Sacar Alimento</div>
+                                    <div class="Final__BotonesFinal-Btn v2" id="Btn2">Sacar Plata</div>
+                                    <div class="Final__BotonesFinal-Btn v3" id="Btn3">Sacar Muertes</div>
+                                    <div class="Final__BotonesFinal-Btn v4" id="Btn4">Sacar Nacimientos</div>
+                                    <div class="Final__BotonesFinal-Btn v5" id="Btn5">Sacar Tierra</div>
+                                    <div class="Final__BotonesFinal-Btn v6" id="Btn6">Sacar Poblacíon</div>
+                                    <div class="Final__BotonesFinal-Btn v7" id="Btn7">Sacar V.Canje Compra</div>
+                                    <div class="Final__BotonesFinal-Btn v8" id="Btn8">Sacar V.Canje Venta</div>
+                                    <div class="Final__BotonesFinal-Btn v9" id="Btn9">Sacar Compra Alimento</div>
+                                    <div class="Final__BotonesFinal-Btn v10" id="Btn10">Sacar Compra Tierra</div>
+                                    <div class="Final__BotonesFinal-Btn v11" id="Btn11">Sacar Vende Alimento</div>
+                                    <div class="Final__BotonesFinal-Btn v12" id="Btn12">Sacar Vende Tierra</div>
+                                    <div class="Final__BotonesFinal-Btn v13" id="Btn13">Sacar Densidad Poblacion</div>
+                                    <div class="Final__BotonesFinal-Bt v14" id="Btn14">Sacar Alimento Poblacion</div>
+                                    <div class="__ferresoft">Ferresoft (r) 2022 Hamurabi</div>
+                                </div>
+                            </div>
+                            <!--
+                        Botones en el Final para Agregar y Sacar lineas en el Grafico
+                    -->
+                            <div class="BotonesFinal">
+                                <input type="button" id="botonOpenX" value="Abrir Pop UP" class="botonOpenX" title="Abrir PopUP para quitar o Aregar opciones">
+                                <input type="hidden" id="status1" value="1">
+                                <input type="hidden" id="status2" value="1">
+                                <input type="hidden" id="status3" value="1">
+                                <input type="hidden" id="status4" value="1">
+                                <input type="hidden" id="status5" value="1">
+                                <input type="hidden" id="status6" value="1">
+                                <input type="hidden" id="status7" value="1">
+                                <input type="hidden" id="status8" value="1">
+                                <input type="hidden" id="status9" value="1">
+                                <input type="hidden" id="status10" value="1">
+                                <input type="hidden" id="status11" value="1">
+                                <input type="hidden" id="status12" value="1">
+                                <input type="hidden" id="status13" value="1">
+                                <input type="hidden" id="status14" value="1">
+                            </div>
+                            <div class="Tabla">
+                                <div class="Final__Tabla" id="Final__Tabla">
+                                    <!--
+                                 Aqui va la Tabla
+                            -->
+                                </div>
+                            </div>
+                        </div>
+                        <div id="PreMorris">
+                            <!-- 
+            DIV Usado por la libreria Morris Estadistica
+            -->
+                            <div id="graph"></div>
+                            <!--  <div id="graph1"></div>
+                    <div id="graph2"></div> -->
+                            <div id="graphError"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--* Aqui esta la Version del Juego --->
+        <script>
+            const valorVersion = "1.00.10";
+        </script>
+        <!--* Aqui esta todas las llamadas a JavaScript --->
+        <script src="js__fondo.js"></script>
+        <script src="js__funciones.js"></script>
+        <script src="js__document.js"></script>
+        <script src="js__global.js"></script>
+        <script src="js__appNombre.js"></script>
+        <script src="js__estado.js"></script>
+        <script src="js__esplica.js"></script>
+        <script src="js__compra_venta.js"></script>
+        <script src="js__pedirpasar.js"></script>
+        <script src="js__final.js"></script>
+        <!--! WARNING     <script src="td.js"></script> --->
+
+</body>
+
+</html>

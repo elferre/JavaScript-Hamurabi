@@ -1,0 +1,98 @@
+input[type="text"],
+input[type="number"],
+.box select {
+    background: #71a154;
+    color: #050d01;
+    border: none;
+    padding: 5px 5px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+input[type="text"] {
+    width: 200px;
+}
+
+input[type="number"] {
+    width: 100px;
+}
+
+.box {
+    position: absolute;
+    top: 130px;
+    left: 200px;
+    transform: translate(-50%, -50%);
+}
+
+.box select {
+    width: 150px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+}
+
+.box::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+    color: #ffffff80;
+    background-color: #ffffff1a;
+    pointer-events: none;
+}
+
+.box:hover::before {
+    color: #ffffff99;
+    background-color: #ffffff33;
+}
+
+.box select option {
+    padding: 3px;
+}
+
+.vboton {
+    position: absolute;
+    top: 250px;
+    left: 170px;
+    border-color: #405b2f;
+    color: #fff;
+    background: #71a154;
+    height: 30px;
+    font-size: 12px;
+    border-radius: 5px;
+    width: 160px;
+    background-image: -webkit-linear-gradient(45deg, #07850d 50%, transparent 50%);
+    background-image: linear-gradient(45deg, #083c0f 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
+    letter-spacing: 1px;
+}
+
+.vboton:hover {
+    background-position: 0;
+}
+
+.botonesDown {
+    position: relative;
+    left: 20px;
+    top: 25px;
+    width: 100%;
+}
+
+.ErrorMenor0 {
+    color: var(--color-rojo);
+    width: 300px;
+}
+
+.BtndownCompra,
+.BtndownVenta {
+    width: 170px;
+}

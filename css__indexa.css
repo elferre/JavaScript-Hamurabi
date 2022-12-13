@@ -1,0 +1,222 @@
+.Menor900 {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .Mayor900 {
+        display: none;
+    }
+    .Menor900 {
+        font-family: sans-serif;
+        display: block;
+    }
+    .Contenedor_Responsi0 {
+        height: 800px;
+        position: absolute;
+        left: 5px;
+        top: 80px;
+        z-index: 10;
+    }
+    .imagenes3 {
+        color: #d0ced7;
+        font-size: 22px;
+        text-align: center;
+        width: 350px;
+        position: absolute;
+        left: 5px;
+        padding: 12px;
+        top: 500px;
+        letter-spacing: 2px;
+        z-index: 15;
+    }
+    .imagenes4 {
+        color: #c6eb8a;
+        background-color: #022a38;
+        font-size: 15px;
+        text-align: center;
+        width: 300px;
+        position: fixed;
+        left: 30px;
+        padding: 10px;
+        top: 870px;
+        letter-spacing: 1px;
+        border-radius: 20px;
+        display: block;
+        white-space: nowrap;
+        border-right: 4px solid;
+        border-bottom: 4px solid;
+        width: 33ch;
+        animation: typing 2s steps(23), .5s;
+        overflow: hidden;
+    }
+}
+
+.Todo1,
+.Todo2,
+.Todo3,
+.Todo4,
+.Todo5 {
+    margin: 0;
+    width: 800px;
+    height: 400px;
+    padding: 0px;
+    position: absolute;
+    left: 0px;
+    top: 70px;
+}
+
+.Todo1 {
+    background-image: url("./imagen/Hamurabi 1.jpg");
+}
+
+.Todo2 {
+    background-image: url("./imagen/Hamurabi 2.jpg");
+}
+
+.Todo3 {
+    background-image: url("./imagen/Hamurabi 3.jpg");
+}
+
+.Todo4 {
+    background-image: url("./imagen/rip1.jpg");
+}
+
+.Todo5 {
+    background-image: url("./imagen/maiz_mal.jpg");
+}
+
+body {
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+h1 {
+    padding: 15px;
+    color: coral;
+}
+
+h1 .Para_Final {
+    color: #127486;
+    top: 30px;
+    left: 450px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.piePagina {
+    color: #17581f;
+    position: absolute;
+    left: 80px;
+    top: 450px;
+}
+
+.Detalle {
+    font-size: 12px;
+    color: #fff;
+    position: absolute;
+    left: 280px;
+    top: 10px;
+    text-align: right;
+    width: 240px;
+    height: 150px;
+}
+
+.nombresGeneral0,
+.nombresGeneral1,
+.nombresGeneral2,
+.nombresGeneral3 {
+    font-size: 14px;
+    position: absolute;
+    left: 670px;
+    top: 20px;
+    width: 200px;
+    height: 100px;
+    text-align: left;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nombresGeneral0 {
+    color: #190c0c;
+    background-color: var(--color-rojo);
+}
+
+.nombresGeneral1 {
+    color: #0383ab;
+    background-color: #0a270e;
+}
+
+.nombresGeneral2 {
+    color: #1f2f01;
+    background-color: #958708;
+}
+
+.nombresGeneral3 {
+    color: #022a38;
+    background-color: #780a28;
+}
+
+.muestraNombre {
+    position: relative;
+    left: 10px;
+    top: 70px;
+}
+
+.rojo {
+    color: var(--color-rojo);
+}
+
+.verde {
+    color: var(--color-verde);
+}
+
+.explicacion {
+    position: absolute;
+    left: 10px;
+    top: 135px;
+    width: 40px;
+    height: 50px;
+    text-align: justify;
+}
+
+.TableTA {
+    /*border: 1px solid;*/
+    width: 370px;
+    height: 270px;
+    font-size: 12px;
+    color: #fff;
+    writing-mode: horizontal-tb;
+}
+
+.Procesando {
+    position: absolute;
+    left: 25px;
+    top: 95px;
+}
+
+.alert_rojo {
+    color: var(--color-rojo);
+}
+
+.alert_rojo table {
+    background-color: #000;
+    padding: 5px;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.Saludo {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 33ch;
+    animation: typing 2s steps(23), .5s;
+    overflow: hidden;
+}
+
+@keyFrames typing {
+    from {
+        width: 0
+    }
+}

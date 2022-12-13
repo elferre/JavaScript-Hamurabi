@@ -1,0 +1,29 @@
+Poblacion
+Alimento
+Tierra
+Valor aleatorio de Canje
+
+Poblacion son los Aldeanos
+destinar Alimento para Sembrar
+destinar Alimento para Alimentar Poblacion
+Comprar / Vender Tierra
+
+Sacar densidad de Poblacion
+Segun densidad mueren o nacen Aldeanos
+
+<!--* Version
+    0.00.00 : Se usa la Libreria Morris para la 
+    1.00.00 : Primera Version Funcional Finalizada 2022-05-14
+    1.00.01 : Primer intento de usar Grid 2022-05-14 19:22:43
+    1.00.02 : Se logro concluir con el Grid 2022-05-14 21:16:26
+    1.00.03 : Se agrego pasar numero a numero romano para que quede mejor visto
+                Fuente: https: //www.iteramos.com/pregunta/98049/Convertir-un-numero-en-un-numero-romano-en-javaScript
+    1.00.04 : Se Agrego Alimento para la Poblacion
+    1.00.05 : Se agrego una clase para controlar el Alimento para la poblacion , que haga Nacer o Morir Gente 2022-05-16 15:01:53
+    1.00.06 : Se Agrego la dificultad del 1.00.05 segun el nivel del juego 2022-05-16 16:48:51
+    1.00.07 : Se Ordeno un poco los Archivos para que se puedan Visualisar en un sierto orden 2022-05-16 17:00:57
+    1.00.08 : Se puso la parte de explicacion en cuatro(4) paginas y su movimiento al estilo de un buscador 2022-05-17 12:04:55
+    1.00.09 : Se Agregaron dos paginas mas en le explicacio en 1.00.08 2022-05-17 17:40:45
+    1.00.10 : Se Agrego para que si la ventana es menor a 900 pixeles, que aparesca otra cosa indexa.css 2022-05-17 20:24:52
+    --->
+
